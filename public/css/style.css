@@ -1,0 +1,132 @@
+body{
+  background-color: #eeeeee;
+}
+
+/* タイトル部分の背景・文字 */
+#title{
+  background-color: rgb(74, 86, 126);
+  font-family: monospace;
+  color: #ffffff;
+}
+
+/* タイムライン部分 */
+#your_container{
+  height:300px;
+}
+/* チャットの外側部分① */
+#messages_container{
+  height: 50%;/*your_containerに対して100%になる */
+  width: 500px;/*your_containerに対して100%になる */
+  background-color: #eee;
+}
+ul,li{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-align: left;
+}
+#scroller {
+    height: 500px;
+    overflow: auto;
+}
+
+/*******************************
+* 左からの吹き出し
+********************************/
+.left_balloon {
+    position: relative;
+    background: rgb(219, 219, 219);
+    border: 2px solid rgb(219, 219, 219);
+    border-radius: 15px 15px 15px 0px;/*左下だけ尖らせて吹き出し感を出す*/
+    margin: 5px 10px;
+    padding: 5px 10px;
+    width: 400px;
+    clear: both;
+}
+
+/*******************************
+* 右からの吹き出し
+********************************/
+.right_balloon {
+    color: #fff;
+    position: relative;
+    background: #06c755;
+    border: 2px solid #06c755;
+    border-radius: 15px 15px 0px 15px;/*右下だけ尖らせて吹き出し感を出す*/
+    margin: 5px 10px;
+    padding: 5px 10px;
+    width: 400px;
+    clear: both;
+    float: right;
+}
+
+/*******************************
+* 割り込みを解除
+********************************/
+.clear_balloon{
+  clear: both;
+}
+
+.sender_name{
+    margin-bottom: -5px;
+    padding-left: 20px;
+    color: rgba(0, 0, 0, .40);
+}
+.sender_name.me{
+    float: right;
+    padding: 0 20px 0 0;
+}
+
+/* テキストボックス */
+.nice-wrap{
+  position: relative;
+  width: calc(100% - 75px);
+  height: 100px;
+ 
+  margin: 0 auto;
+}
+
+.nice-label{
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  font-size: 16px;
+  color: #424242;
+  transition: all 0.25s ease;
+}
+
+.nice-textbox{
+  position: relative;
+  display: block;
+  width: 500px;
+  margin-top: 50px;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #424242;
+  outline: none;
+}
+
+
+/* ボタン */
+.btn-flat-simple {
+  display: inline-block;
+  margin-top: 50px;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #06c755;
+  border: solid 2px #06c755;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.btn-flat-simple:hover {
+  background: #06c755;
+  color: white;
+}
+
+/* 送信ボタン横並び */
+/* #send{
+  display:flex;
+} */

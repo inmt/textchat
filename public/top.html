@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>テキストチャット_デモ</title>
+  </head>
+  
+  <body>
+    <div id="title">
+    <h1>Text Chat</h1>
+   </div>
+  
+    <div class="panel_heading">
+
+    </div>
+    
+    <div id="scroller" class="panel_body">
+      <!-- タイムライン部分 -->
+      <ul id="messages"></ul>
+    </div>
+
+   <!-- テキストボックス、送信ボタン④ -->
+   <div class="panel-footer">
+    <input type="text" class="form-control" id="nameInput" placeholder="user name">
+    <div id="send">
+      <form sutocomplete = "off">
+        <input class="nice-textbox" type="text" id="message" placeholder="your message…">
+      </form>
+      <!-- 送信ボタン -->
+      <!-- <a href="#" input type="submit" class="btn-flat-simple" id="enter">
+        <i class="fa fa-caret-right"></i> 送信
+      </a> -->
+    </div>
+
+  </div>
+
+  <!-- csvダウンロードボタン -->
+  <div id="csv">
+  <button id="download" type="button">Download CSV</button>
+  </div>
+  
+   <!-- ログイン・ログアウトボタン
+  <div id="log"></div>
+   <a href="#" class="btn-flat-simple" id="login">
+    <i class="fa fa-caret-right"></i> Login
+  </a>
+  <a href="#" class="btn-flat-simple" id="logout">
+    <i class="fa fa-caret-right"></i> Logout
+  </a>  -->
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
+
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+     <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-firestore.js"></script>
+ 
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
+
+
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/keylog.js"></script>
+
+</body>
+</html>
