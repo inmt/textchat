@@ -95,7 +95,7 @@ ul,li{
   transition: all 0.25s ease;
 }
 
-.nice-textbox{
+#message{
   position: relative;
   display: block;
   width: 500px;
@@ -125,8 +125,3 @@ ul,li{
   background: #06c755;
   color: white;
 }
-
-/* 送信ボタン横並び */
-/* #send{
-  display:flex;
-} */

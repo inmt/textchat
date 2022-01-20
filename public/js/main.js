@@ -17,7 +17,7 @@
 
   //firebaseとデータ入れにmessagesと言う名前をつけて使えるようにする
   const db = firebase.firestore();
-  const collection = db.collection('messages');
+  const collection = db.collection('message11');  //←この値を変更することでコレクションを増やせます
 
   //authenticationを使えるようにする
   const auth = firebase.auth();
@@ -30,21 +30,6 @@
   const form = document.querySelector('form');
   const messages = document.getElementById('messages');
   const username = document.getElementById('nameInput');
-  const send = document.getElementById('enter');
-
-  // //login,logout
-  // const login = document.getElementById('login');
-  // const logout = document.getElementById('logout');
-
-  // //login処理
-  // login.addEventListener('click' , () => {
-  //   auth.signInAnonymously();
-  // })
-
-  // //logout処理
-  // logout.addEventListener('click' , () => {
-  //   auth.signOut();
-  // })
 
   //login状態の監視
   auth.onAuthStateChanged(user => {
@@ -60,7 +45,6 @@
           if(change.type === 'added'){
             const li = document.createElement('li');
             const d = change.doc.data();
-            var messages_element = document.getElementById("messages");
 
             //取得したデータの名前が自分なら右側に吹き出しを出す
             if( d.uid == (`${user.uid}`)){
@@ -72,7 +56,7 @@
               var new_element2 = document.getElementById("messages");
               new_element2.insertAdjacentHTML("beforebegin", "<il><p class='sender_name'>" + d.username + "</p><p class='left_balloon'>" + d.message + "</p><p class='clear_balloon'></p></il>");
             }
-            // 一番下にスクロールする
+            // チャットの一番下にスクロールする
             var scroll = document.getElementById("scroller");
             scroll.scrollTop = scroll.scrollHeight;
           }
@@ -91,15 +75,8 @@
     console.log(`誰もログインしていません`);
   });
 
-  //Shift+controlで改行
-  //   if (e.keyCode == 13 && !e.shiftKey){
-    //実行したい関数
-  //   e.preventDefault();
-  // }
-
-
-  //formの投稿イベント
-  //投稿されたらページ遷移しないように
+  //長押し対策
+  let isFirstPost = true;
 
   form.addEventListener('submit', e => {
     e.preventDefault();

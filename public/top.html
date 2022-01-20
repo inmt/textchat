@@ -25,12 +25,9 @@
     <input type="text" class="form-control" id="nameInput" placeholder="user name">
     <div id="send">
       <form sutocomplete = "off">
-        <input class="nice-textbox" type="text" id="message" placeholder="your message…">
+        <textarea name="text" id="message" placeholder="your message…" maxlength="100" onkeydown="if(event.metaKey&&event.keyCode==13){document.getElementById('submit').click();return false};"></textarea>
+          <input type="submit" id="submit" value="送信">
       </form>
-      <!-- 送信ボタン -->
-      <!-- <a href="#" input type="submit" class="btn-flat-simple" id="enter">
-        <i class="fa fa-caret-right"></i> 送信
-      </a> -->
     </div>
 
   </div>
@@ -40,14 +37,6 @@
   <button id="download" type="button">Download CSV</button>
   </div>
   
-   <!-- ログイン・ログアウトボタン
-  <div id="log"></div>
-   <a href="#" class="btn-flat-simple" id="login">
-    <i class="fa fa-caret-right"></i> Login
-  </a>
-  <a href="#" class="btn-flat-simple" id="logout">
-    <i class="fa fa-caret-right"></i> Logout
-  </a>  -->
 
   <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
